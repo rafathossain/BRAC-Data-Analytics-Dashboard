@@ -41,14 +41,220 @@
 <body class="bg">
     <div style="height: 100vh">
         <div class="side_nav text-center">
-            <a href="index.html">
-            <img class="img_float mt-4" src="http://www.sclance.com/pngs/server-icon-png/server_icon_png_1224341.jpg"
-                width="90px" />
+            <a href="#!" data-toggle="modal" data-target="#graphs">
+                <img class="img_float mt-4"
+                    src="http://www.sclance.com/pngs/server-icon-png/server_icon_png_1224341.jpg" width="90px" />
             </a>
-            <img class="img_float mt-4" src="img/icons/ic.png" width="90px" />
-            <img class="img_float mt-4" src="img/icons/ic4.png" width="90px" />
-            <img class="img_float mt-4" src="img/icons/ic5.png" width="90px" />
-            <img class="img_float mt-4" src="img/icons/ic6.png" width="90px" />
+            <a href="index.html">
+                <img class="img_float mt-4" src="img/icons/ic.png" width="90px" />
+            </a>
+            <a href="#!" data-toggle="modal" data-target="#profile">
+                <img class="img_float mt-4" src="img/icons/ic4.png" width="90px" />
+            </a>
+            <a href="download.csv" target="_blank">
+                <img class="img_float mt-4" src="img/icons/ic5.png" width="90px" />
+            </a>
+            <a href="#!" data-toggle="modal" data-target="#chat">
+                <img class="img_float mt-4" src="img/icons/ic6.png" width="90px" />
+            </a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="graphs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Graphs</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td style="border: 5px solid black"><img src="img/icons/Performance_chart.gif"
+                                        width="100%" /></td>
+                                <td style="border: 5px solid black"><img src="img/icons/Country_Profile.gif"
+                                        width="100%" /></td>
+                            </tr>
+                            <tr>
+                                <td style="border: 5px solid black"><img
+                                        src="img/icons/bubble_multi_dimessional_visualization.gif" width="100%" /></td>
+                                <td style="border: 5px solid black"><img src="img/icons/Rank_charts.gif" width="100%" />
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="chat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Support</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!--Section: Contact v.2-->
+                        <section class="mb-4">
+
+                            <!--Section heading-->
+                            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+                            <!--Section description-->
+                            <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not
+                                hesitate to contact us directly. Our team will come back to you within
+                                a matter of hours to help you.</p>
+
+                            <div class="row">
+
+                                <!--Grid column-->
+                                <div class="col-md-9 mb-md-0 mb-5">
+                                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                                        <!--Grid row-->
+                                        <div class="row">
+
+                                            <!--Grid column-->
+                                            <div class="col-md-6">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="name" name="name" class="form-control">
+                                                    <label for="name" class="">Your name</label>
+                                                </div>
+                                            </div>
+                                            <!--Grid column-->
+
+                                            <!--Grid column-->
+                                            <div class="col-md-6">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="email" name="email" class="form-control">
+                                                    <label for="email" class="">Your email</label>
+                                                </div>
+                                            </div>
+                                            <!--Grid column-->
+
+                                        </div>
+                                        <!--Grid row-->
+
+                                        <!--Grid row-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="subject" name="subject" class="form-control">
+                                                    <label for="subject" class="">Subject</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Grid row-->
+
+                                        <!--Grid row-->
+                                        <div class="row">
+
+                                            <!--Grid column-->
+                                            <div class="col-md-12">
+
+                                                <div class="md-form">
+                                                    <textarea type="text" id="message" name="message" rows="2"
+                                                        class="form-control md-textarea"></textarea>
+                                                    <label for="message">Your message</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Grid row-->
+
+                                    </form>
+                                    <div class="status"></div>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-3 text-center">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                                            <p>San Francisco, CA 94126, USA</p>
+                                        </li>
+
+                                        <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                                            <p>+ 01 234 567 89</p>
+                                        </li>
+
+                                        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                                            <p>contact@mdbootstrap.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--Grid column-->
+
+                            </div>
+
+                        </section>
+                        <!--Section: Contact v.2-->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">User Profile</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Card Regular -->
+                        <div class="card card-cascade">
+
+                            <!-- Card image -->
+                            <div class="view view-cascade overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/men.jpg"
+                                    alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-center">
+
+                                <!-- Title -->
+                                <h4 class="card-title"><strong>Billy Coleman</strong></h4>
+                                <!-- Subtitle -->
+                                <h6 class="font-weight-bold indigo-text py-2">Web developer</h6>
+                                <!-- Text -->
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Voluptatibus, ex, recusandae. Facere modi sunt, quod quibusdam.
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Regular -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container-fluid" style="padding-left: 150px;">
             <img class="img_float" src="https://static.youthop.com/uploads/sites/2/2018/05/brac-logo-big.png"
@@ -81,25 +287,25 @@
                             <tr style="border: 1px solid black">
                                 <td class="text-center" style="background: #999999ff; width: 50%;">
                                     <a href="health_info.html">
-                                    <img src="img/icons/ic7.png" width="70px" />
-                                    <br>
-                                    <p style="font-size: 22px">
-                                        <b>60%</b>
+                                        <img src="img/icons/ic7.png" width="70px" />
                                         <br>
-                                        Toilet Problem
-                                    </p>
+                                        <p style="font-size: 22px">
+                                            <b>60%</b>
+                                            <br>
+                                            Toilet Problem
+                                        </p>
                                     </a>
                                 </td>
 
                                 <td class="text-center" style="width: 50%">
                                     <a href="hygiene_info.html">
-                                    <img src="img/icons/ic8.png" width="70px" />
-                                    <br>
-                                    <p style="font-size: 22px">
-                                        <b>40%</b>
+                                        <img src="img/icons/ic8.png" width="70px" />
                                         <br>
-                                        Hygiene Problem
-                                    </p>
+                                        <p style="font-size: 22px">
+                                            <b>40%</b>
+                                            <br>
+                                            Hygiene Problem
+                                        </p>
                                     </a>
                                 </td>
                             </tr>
@@ -213,7 +419,9 @@
         new Chart(document.getElementById("horizontalBar"), {
             "type": "horizontalBar",
             "data": {
-                "labels": ["Man (20 to 40)", "Man (41 to 60+)", "Woman (20 to 40)", "Woman (41 to 60+)", "Boy (7 to 19)", "Girl (7 to 19)"],
+                "labels": ["Man (20 to 40)", "Man (41 to 60+)", "Woman (20 to 40)", "Woman (41 to 60+)",
+                    "Boy (7 to 19)", "Girl (7 to 19)"
+                ],
                 "datasets": [{
                     "label": "Affected Stakeholders",
                     "data": [8, 12, 22, 30, 10, 18],
